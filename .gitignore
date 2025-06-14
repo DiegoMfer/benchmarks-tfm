@@ -1,0 +1,8 @@
+# Ignore all .owl files in the lubm/outputfiles directory
+lubm/outputfiles/*.owl
+
+# Ignore log.txt in the outputfiles directory
+lubm/outputfiles/log.txt
+
+# Optionally ignore all .owl files in any subdirectory of lubm
+lubm/**/*.owl
