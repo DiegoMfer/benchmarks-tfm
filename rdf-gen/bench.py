@@ -39,14 +39,14 @@ def benchmark_rdfgen(shape_file, output_file, num_instances, n_runs=10, csv_file
             triples = count_triples(output_file)
             exec_time = end - start
             print(f"Run {i}: Execution time = {exec_time:.2f} s, Triples = {triples}")
-            writer.writerow([i, num_instances, f"{exec_time:.2f}", triples])
+            writer.writerow([i, num_instances, f"{exec_time:.12f}", triples])
             time.sleep(1)
 
 if __name__ == "__main__":
     # Example usage
     shape_file = "input-shape.ttl"
     output_file = "output.ttl"
-    num_instances = 5000
+    num_instances = 50
     n_runs = 30
     csv_filename = "rdfgraphgen_benchmark_results.csv"
     benchmark_rdfgen(shape_file, output_file, num_instances, n_runs, csv_filename)
